@@ -8,6 +8,7 @@
 
 #import "MYNStickyFlowLayout.h"
 
+NSInteger const kZIndex = 1024;
 
 @implementation MYNStickyFlowLayout
 
@@ -98,7 +99,7 @@
 - (void)updateHeaderAttributes:(UICollectionViewLayoutAttributes *)attributes lastCellAttributes:(UICollectionViewLayoutAttributes *)lastCellAttributes
 {
     if (self.scrollDirection == UICollectionViewScrollDirectionVertical) {
-        attributes.zIndex = 1024;
+        attributes.zIndex = kZIndex;
         attributes.hidden = NO;
         
         // last point of section minus height of header
@@ -136,7 +137,7 @@
             [self.resizableHeaderDelegate sectionHeaderResizedToHeight:attributes.frame.size.height];
         }
     } else {
-        attributes.zIndex = 768;
+        attributes.zIndex = kZIndex;
         attributes.hidden = NO;
         
         // last point of section minus height of header
@@ -178,7 +179,7 @@
 
 - (void)updateFooterAttributes:(UICollectionViewLayoutAttributes *)attributes firstCellAttributes:(UICollectionViewLayoutAttributes *)firstCellAttributes
 {
-    attributes.zIndex = 1024;
+    attributes.zIndex = kZIndex;
     attributes.hidden = NO;
     
     // starting point of section
