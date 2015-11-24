@@ -18,5 +18,6 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/sprylab/MYNStickyFlowLayout.git", :tag => s.version.to_s }
   s.source_files  = "Classes", "Classes/**/*.{h,m}"
   s.exclude_files = "Classes/Exclude"
+  s.deployment_target = '7.0'
 
 end
